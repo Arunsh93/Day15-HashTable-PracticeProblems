@@ -6,8 +6,8 @@ namespace HashTableExample
 {
     class MyMapNode<K, V>
     {
-        private int size;
-        private LinkedList<KeyValue<K, V>>[] items;
+        public int size;
+        public LinkedList<KeyValue<K, V>>[] items;
 
         public MyMapNode(int size)
         {
@@ -41,6 +41,7 @@ namespace HashTableExample
             LinkedList<KeyValue<K, V>> linkedList = GetLinkedList(position);
             KeyValue<K, V> item = new KeyValue<K, V>() { Key = key, Value = value };
             linkedList.AddLast(item);
+            Console.WriteLine(item.Key + " " + item.Value);
         }
 
         public LinkedList<KeyValue<K, V>> GetLinkedList(int position)
