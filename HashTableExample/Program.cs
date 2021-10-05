@@ -19,8 +19,14 @@ namespace HashTableExample
                 key++;
             }
 
-            Frequency frequency = new Frequency();
-            frequency.WordFrequency(hashTable);
+            /*Frequency frequency = new Frequency();
+            frequency.WordFrequency(hashTable);*/
+
+            Operations operation = new Operations();
+            operation.WordFrequency(hashTable);
+            Console.WriteLine();
+            operation.Remove(hashTable, "avoidable");
+
 
             /*hash.Add("0", "To");
             hash.Add("1", "be");
